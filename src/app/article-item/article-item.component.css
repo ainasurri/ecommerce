@@ -1,0 +1,10 @@
+.article-item {
+    border: 1px solid #ddd;
+    padding: 20%;
+    margin-bottom: 10px;
+  }
+  .article-item img {
+    max-width: 5rem;
+    height: auto;
+  }
+  
