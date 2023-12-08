@@ -1,9 +1,12 @@
-<p>article-item works!</p>
-<div class="article-item">
-    <img [src]="article.imageUrl" alt="{{ article.name }}">
+<div class="article-item" [ngClass]="{'on-sale': isOnSale}">
+    <img src="../../assets/tassa.png">
     <h2>{{ article.name }}</h2>
     <p>Preu: {{ article.price | currency }}</p>
     <p *ngIf="article.isOnSale">En oferta!</p>
-    <p>Quantitat en cistella: {{ article.quantityInCart }}</p>
-  </div>
+    <!-- <p>Quantitat en cistella: {{ article.quantityInCart }}</p> -->
+    <button (click)="decrement()" [disabled]="quantityInCart === 0">-</button>
+    <span>{{ quantityInCart }}</span>
+    <button (click)="increment()">+</button>
+</div>
   
+

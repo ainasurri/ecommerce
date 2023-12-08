@@ -4,7 +4,11 @@
     margin-bottom: 10px;
   }
   .article-item img {
-    max-width: 5rem;
+    max-width: 100px;
     height: auto;
   }
   
+  .article-item.on-sale {
+    background-color: rgb(231, 228, 62); 
+    font-weight: bold;
+  }
