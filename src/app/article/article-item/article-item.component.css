@@ -12,3 +12,7 @@
     background-color: rgb(231, 228, 62); 
     font-weight: bold;
   }
+
+  .disponible {
+    color: grey;
+}
