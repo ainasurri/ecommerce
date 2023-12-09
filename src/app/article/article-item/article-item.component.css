@@ -1,14 +1,14 @@
-.article-item {
+.app-article-item {
     border: 1px solid #ddd;
     padding: 20%;
     margin-bottom: 10px;
   }
-  .article-item img {
-    max-width: 100px;
+  .app-article-item img {
+    max-width: 5rem;
     height: auto;
   }
   
-  .article-item.on-sale {
+  .app-article-item.on-sale {
     background-color: rgb(231, 228, 62); 
     font-weight: bold;
   }
