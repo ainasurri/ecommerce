@@ -1,5 +1,5 @@
 <div class="article-item" [class]="article.isOnSale ? 'article-item sale' : ''">
-    <img [src]="article.imageUrl">
+    <img [src]= "article.imageUrl">
     <div>{{article.name}}</div>
     <div [ngClass]="{'disponible': !article.isOnSale}">$ {{article.price}}</div>
 

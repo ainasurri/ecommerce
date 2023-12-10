@@ -17,4 +17,10 @@ export class ArticleListComponent implements OnInit {
 
   ngOnInit(): void {
   }
+  handleQuantityChange(event: { article: Article, quantity: number }) {
+    console.log('Quantity Changed', event);
+
+  }
+
 }
+

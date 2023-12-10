@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
 import { Article } from '../../model/article';
 
 @Component({
@@ -8,7 +8,8 @@ import { Article } from '../../model/article';
 })
 
 export class ArticleItemComponent implements OnInit {
-  public article: Article;
+  @Input() article: Article;  
+  @Output() quantityChange = new EventEmitter<{article: Article, quantity: number}>();  
 
   constructor() { 
     this.article = {
@@ -32,11 +33,13 @@ export class ArticleItemComponent implements OnInit {
 
   increment() {
     this.article.quantityInCart++;
+    this.quantityChange.emit({article: this.article, quantity: this.article.quantityInCart});
   }
 
   decrement() {
     if (this.article.quantityInCart > 0) {
       this.article.quantityInCart--;
+      this.quantityChange.emit({article: this.article, quantity: this.article.quantityInCart});
     }
   }
 }
