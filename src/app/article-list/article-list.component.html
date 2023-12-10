@@ -1,4 +1,8 @@
 <!-- <p>article-list works!</p> -->
 <div *ngFor="let article of articles">
-    <app-article-item [article]="article" (quantityChange)="handleQuantityChange($event)"></app-article-item>
+    <app-article-item 
+      [article]="article" 
+      (increment)="handleIncrement($event)" 
+      (decrement)="handleDecrement($event)">
+    </app-article-item>
 </div>
